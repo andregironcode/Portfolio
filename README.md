@@ -108,12 +108,19 @@ npm install
 Create a new file named `.env` in the root of your project and add the following content:
 
 ```env
-REACT_APP_EMAILJS_USERID=your_emailjs_user_id
-REACT_APP_EMAILJS_TEMPLATEID=your_emailjs_template_id
-REACT_APP_EMAILJS_RECEIVERID=your_emailjs_receiver_id
+VITE_APP_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_APP_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_APP_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 ```
 
 Replace the placeholder values with your actual EmailJS credentials. You can obtain these credentials by signing up on the [EmailJS website](https://www.emailjs.com/).
+
+**Setting up EmailJS:**
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create a new email service (Gmail, Outlook, etc.)
+3. Create an email template with variables: `{{from_name}}`, `{{from_email}}`, `{{to_name}}`, `{{message}}`
+4. Get your Public Key from the Account section
+5. Add the Service ID, Template ID, and Public Key to your `.env` file
 
 **Running the Project**
 
@@ -412,7 +419,7 @@ export const clientReviews = [
     position: 'Founder of TechGear Shop',
     img: 'assets/review2.png',
     review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+      'Adrian's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He's a true professional! Fantastic work.',
   },
   {
     id: 3,
@@ -420,7 +427,7 @@ export const clientReviews = [
     position: 'Project Manager at UrbanTech ',
     img: 'assets/review3.png',
     review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+      'I can't say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
   },
   {
     id: 4,
